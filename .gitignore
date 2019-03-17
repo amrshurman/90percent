@@ -1,4 +1,10 @@
+# R/RStudio files to ignore
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Java/Netbeans files and directories to ignore
+dist
+build
+private
