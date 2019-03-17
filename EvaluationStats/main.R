@@ -12,3 +12,7 @@ hist(Logins.avgFail, ylim=c(0,25), xlim=c(0,60000), main="Histogram of time for 
 
 hist(Logins.avgSuccess, ylim=c(0,25), xlim=c(0,50000), main="Histogram of time for Successful Logins", xlab = "time of Successful logins (ms)")
 
+boxplot(Logins.avgFail, main ="BoxPlot of time for Failed Logins", ylab = "time of Failed logins (ms)")
+
+boxplot(Logins.avgSuccess,main ="BoxPlot of time for Successful Logins", ylab = "time of Successful logins (ms)")
+
