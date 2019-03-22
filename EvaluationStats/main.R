@@ -93,7 +93,7 @@ print("sd for failed login time")
 print(sd(Logins.avgFail[scheme=="testpasstiles"]))
 
 
-hist(Logins.Total[scheme=="testpasstiles"], ylim=c(0,10),breaks=7, main="Histogram of image21 Total Logins", xlab = "Total logins")
+hist(Logins.Total[scheme=="testpasstiles"], ylim=c(0,10),xlim=c(0,40), main="Histogram of image21 Total Logins", xlab = "Total logins")
 
 hist(Logins.success[scheme=="testpasstiles"], ylim=c(0,8), xlim=c(0,20), main="Histogram of Succesful image21 Logins", xlab = "Succesful logins")
 
