@@ -40,17 +40,17 @@ print("sd for failed login time")
 print(sd(Logins.avgFail[scheme=="testtextrandom"]))
 
 
-hist(Logins.Total[scheme=="testtextrandom"], ylim=c(0,20),breaks=7, main="Histogram of text21 Total Logins", xlab = "Total logins")
+hist(Logins.Total[scheme=="testtextrandom"], ylim=c(0,7),xlim=c(0,35), breaks=7, main="Histogram of text21 Total Logins", xlab = "Total logins")
 
-hist(Logins.success[scheme=="testtextrandom"], ylim=c(0,25), xlim=c(0,25), main="Histogram of Succesful text21 Logins", xlab = "Succesful logins")
+hist(Logins.success[scheme=="testtextrandom"], ylim=c(0,18), xlim=c(0,25), main="Histogram of Succesful text21 Logins", xlab = "Succesful logins")
 
-hist(Logins.Failure[scheme=="testtextrandom"], ylim=c(0,25), xlim=c(0,25), main="Histogram of Failed text21 Logins", xlab = "Failed logins")
+hist(Logins.Failure[scheme=="testtextrandom"], ylim=c(0,18), xlim=c(0,12), main="Histogram of Failed text21 Logins", xlab = "Failed logins")
 
-hist(Logins.avgFail[scheme=="testtextrandom"], ylim=c(0,25), xlim=c(0,60000), main="Histogram of time for Failed text21 Logins", xlab = "time of Failed logins (ms)")
+hist(Logins.avgFail[scheme=="testtextrandom"], ylim=c(0,10), xlim=c(0,30000), main="Histogram of time for Failed text21 Logins", xlab = "time of Failed logins (ms)")
 
-hist(Logins.avgSuccess[scheme=="testtextrandom"], ylim=c(0,25), xlim=c(0,50000), main="Histogram of time for Successful text21 Logins", xlab = "time of Successful logins (ms)")
+hist(Logins.avgSuccess[scheme=="testtextrandom"], ylim=c(0,8), xlim=c(0,30000), main="Histogram of time for Successful text21 Logins", xlab = "time of Successful logins (ms)")
 
-boxplot(Logins.avgFail[scheme=="testtextrandom"], main ="BoxPlot of time for text21 Failed Logins", ylab = "time of Failed logins (ms)")
+boxplot(Logins.avgFail[scheme=="testtextrandom"], ylim=c(0,30000),main ="BoxPlot of time for text21 Failed Logins", ylab = "time of Failed logins (ms)")
 
 boxplot(Logins.avgSuccess[scheme=="testtextrandom"],main ="BoxPlot of text21 time for Successful Logins", ylab = "time of Successful logins (ms)")
 
@@ -93,18 +93,18 @@ print("sd for failed login time")
 print(sd(Logins.avgFail[scheme=="testpasstiles"]))
 
 
-hist(Logins.Total[scheme=="testpasstiles"], ylim=c(0,20),breaks=7, main="Histogram of image21 Total Logins", xlab = "Total logins")
+hist(Logins.Total[scheme=="testpasstiles"], ylim=c(0,10),xlim=c(0,40), main="Histogram of image21 Total Logins", xlab = "Total logins")
 
-hist(Logins.success[scheme=="testpasstiles"], ylim=c(0,25), xlim=c(0,25), main="Histogram of Succesful image21 Logins", xlab = "Succesful logins")
+hist(Logins.success[scheme=="testpasstiles"], ylim=c(0,8), xlim=c(0,20), main="Histogram of Succesful image21 Logins", xlab = "Succesful logins")
 
-hist(Logins.Failure[scheme=="testpasstiles"], ylim=c(0,25), xlim=c(0,25), main="Histogram of Failed image21 Logins", xlab = "Failed logins")
+hist(Logins.Failure[scheme=="testpasstiles"], ylim=c(0,12), xlim=c(0,25), main="Histogram of Failed image21 Logins", xlab = "Failed logins")
 
-hist(Logins.avgFail[scheme=="testpasstiles"], ylim=c(0,25), xlim=c(0,60000), main="Histogram of time for Failed image21 Logins", xlab = "time of Failed logins (ms)")
+hist(Logins.avgFail[scheme=="testpasstiles"], ylim=c(0,10), xlim=c(0,60000), main="Histogram of time for Failed image21 Logins", xlab = "time of Failed logins (ms)")
 
-hist(Logins.avgSuccess[scheme=="testpasstiles"], ylim=c(0,25), xlim=c(0,50000), main="Histogram of time for Successful image21 Logins", xlab = "time of Successful logins (ms)")
+hist(Logins.avgSuccess[scheme=="testpasstiles"], ylim=c(0,10), xlim=c(0,50000), main="Histogram of time for Successful image21 Logins", xlab = "time of Successful logins (ms)")
 
-boxplot(Logins.avgFail[scheme=="testpasstiles"], main ="BoxPlot of time for image21 Failed Logins", ylab = "time of Failed logins (ms)")
+boxplot(Logins.avgFail[scheme=="testpasstiles"], ylim= c(0,50000),main ="BoxPlot of time for image21 Failed Logins", ylab = "time of Failed logins (ms)")
 
-boxplot(Logins.avgSuccess[scheme=="testpasstiles"],main ="BoxPlot of image21 time for Successful Logins", ylab = "time of Successful logins (ms)")
+boxplot(Logins.avgSuccess[scheme=="testpasstiles"],ylim=c(0,30000),main ="BoxPlot of image21 time for Successful Logins", ylab = "time of Successful logins (ms)")
 
 
