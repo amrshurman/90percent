@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class COMP3008CSVReader {
 
-    static final String TIMEFORMAT = "yyy-MM-dd hh:mm:ss";
+    static final String TIMEFORMAT = "yyyy-MM-dd hh:mm:ss";
     static final SimpleDateFormat dateFormat = new SimpleDateFormat(TIMEFORMAT);
     static final int TIMECOL = 0, USERCOL = 1, SITECOL = 2, SCHEMECOL = 3, MODECOL = 4, EVENTCOL = 5, DATACOL = 6;
     
