@@ -11,6 +11,10 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -85,7 +89,14 @@ public class CharacterDisplay extends JPanel {
             imageLabel.setIcon(null);
             imageLabel.setBackground(new Color(0, 0, 0, 0));
         } else {
-            ImageIcon icon = new ImageIcon("./res/animals/"+character.getAnimal()+".png");
+            
+            ImageIcon icon = null;
+            try {
+                icon = new ImageIcon(ImageIO.read(ClassLoader.getSystemResourceAsStream("animals/"+character.getAnimal()+".png")));
+            } catch (IOException ex) {
+                Logger.getLogger(CharacterDisplay.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            //ImageIcon icon = new ImageIcon("./res/animals/"+character.getAnimal()+".png");
             //System.out.println(icon + " | " + character.getAnimal());
             imageLabel.setIcon(icon);
             imageLabel.setBackground(getCharacterColor(character));
