@@ -122,7 +122,7 @@ public class PasswordTester {
         frame.setVisible(true);
         
         try {
-            writer = new CSVWriter(System.getProperty("user.home") + "/Desktop/KeyPairPassword.csv");
+            writer = new CSVWriter(System.getProperty("user.home") + "/Desktop/KeyPairPassword"+user+".csv");
         } catch (IOException ex) {
             Logger.getLogger(PasswordTester.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -148,15 +148,16 @@ public class PasswordTester {
     }
     
     
-    private void log(String site, String mode, String event){
-        String[] logData = new String[7];
+    private void log(String site, String event, String data){
+        String[] logData = new String[8];
         logData[0] = format.format(new Date());
         logData[1] = user;
         logData[2] = site;
         logData[3] = scheme;
-        logData[4] = mode;
+        logData[4] = "log";
         logData[5] = event;
-        logData[6] = "";
+        logData[6] = data;
+        logData[7] = "";
         
         String output = "";
         for (int i = 0; i < logData.length; i++){

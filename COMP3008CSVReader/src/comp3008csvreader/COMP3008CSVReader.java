@@ -32,9 +32,11 @@ public class COMP3008CSVReader {
         try {
             CSVReader textReader = new CSVReader("../data/text21.csv");
             CSVReader imageReader = new CSVReader("../data/imagept21.csv");
+            CSVReader pairReader = new CSVReader("../data/KeyPairPassword.csv");
             
             readDataFromFile(textReader, users);
             readDataFromFile(imageReader, users);
+            readDataFromFile(pairReader, users);
             
             CSVWriter writer = new CSVWriter("../data/loginData.csv");
             writer.writeNext(new String[]{"userID", "scheme", "Logins.Total", "Logins.success", "Logins.Failure", "Logins.avgSuccess", "Logins.avgFail"});
