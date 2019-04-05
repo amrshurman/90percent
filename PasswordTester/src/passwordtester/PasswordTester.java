@@ -134,6 +134,7 @@ public class PasswordTester {
                     writer.close();
                 } catch (IOException ex) {
                     Logger.getLogger(PasswordTester.class.getName()).log(Level.SEVERE, null, ex);
+                    txtLogs.append("Error: Unable to create log file\n");
                 }
             }
         }));
@@ -172,6 +173,7 @@ public class PasswordTester {
             writer.writeNext(logData);
         } catch (IOException ex) {
             Logger.getLogger(PasswordTester.class.getName()).log(Level.SEVERE, null, ex);
+            txtLogs.append("Error: Unable to write to log file\n");
         }
     }
     
