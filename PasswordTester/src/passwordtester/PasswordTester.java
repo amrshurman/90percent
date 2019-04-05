@@ -122,9 +122,12 @@ public class PasswordTester {
         frame.setVisible(true);
         
         try {
-            writer = new CSVWriter(System.getProperty("user.home") + "/Desktop/KeyPairPassword"+user+".csv");
+            String fileName = System.getProperty("user.home") + "/Desktop/KeyPairPassword"+user+".csv";
+            writer = new CSVWriter(fileName);
+            txtLogs.append("Writing Log to: "+fileName+"\n");
         } catch (IOException ex) {
             Logger.getLogger(PasswordTester.class.getName()).log(Level.SEVERE, null, ex);
+            txtLogs.append("Error: Unable to create log file\n");
         }
         
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
@@ -134,7 +137,6 @@ public class PasswordTester {
                     writer.close();
                 } catch (IOException ex) {
                     Logger.getLogger(PasswordTester.class.getName()).log(Level.SEVERE, null, ex);
-                    txtLogs.append("Error: Unable to create log file\n");
                 }
             }
         }));
