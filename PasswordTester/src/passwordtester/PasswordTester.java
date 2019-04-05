@@ -225,6 +225,7 @@ public class PasswordTester {
                     panel.add(lblmsg, c);
                     
                     Password password = Password.createRandomPassword(3);
+                    passwords.put(field, password);
                     PasswordDisplay display = new PasswordDisplay(password, false);
                     c.gridy = 1; c.gridx = 0;
                     c.weightx = 1; c.weighty = 1;
@@ -233,8 +234,6 @@ public class PasswordTester {
                     log(field, "create", "start");
                     JOptionPane.showMessageDialog(frame, panel, "Create a Password", JOptionPane.PLAIN_MESSAGE);
                     log(field, "create", "passwordSubmitted");
-                    
-                    passwords.put(field, password);
                     
                     btnNext.setEnabled(true);
                 }
