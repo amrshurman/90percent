@@ -108,3 +108,57 @@ boxplot(Logins.avgFail[scheme=="testpasstiles"], ylim= c(0,50000),main ="BoxPlot
 boxplot(Logins.avgSuccess[scheme=="testpasstiles"],ylim=c(0,30000),main ="BoxPlot of image21 time for Successful Logins", ylab = "time of Successful logins (ms)")
 
 
+print("for ColorAnimalPair")
+print("Mean for total login")
+print(mean(Logins.Total[scheme=="ColorAnimalPair"]))
+print("Mean for successful login")
+print(mean(Logins.success[scheme=="ColorAnimalPair"]))
+print("Mean for Failed login")
+print(mean(Logins.Failure[scheme=="ColorAnimalPair"]))
+
+print("Median for total login")
+print(median(Logins.Total[scheme=="ColorAnimalPair"]))
+print("Median for successful login")
+print(median(Logins.success[scheme=="ColorAnimalPair"]))
+print("Median for Failed login")
+print(median(Logins.Failure[scheme=="ColorAnimalPair"]))
+
+print("sd for Total login")
+print(sd(Logins.Total[scheme=="ColorAnimalPair"]))
+print("sd for Successful login")
+print(sd(Logins.success[scheme=="ColorAnimalPair"]))
+print("sd for Failed login")
+print(sd(Logins.Failure[scheme=="testpasstiles"]))
+
+print("Mean for successful login time")
+print(mean(Logins.avgSuccess[scheme=="ColorAnimalPair"]))
+print("Mean for failed login time")
+print(mean(Logins.avgFail[scheme=="ColorAnimalPair"]))
+
+print("Median for successful login time")
+print(median(Logins.avgSuccess[scheme=="ColorAnimalPair"]))
+print("Median for failed login time")
+print(median(Logins.avgFail[scheme=="ColorAnimalPair"]))
+
+print("sd for successful login time")
+print(sd(Logins.avgSuccess[scheme=="ColorAnimalPair"]))
+print("sd for failed login time")
+print(sd(Logins.avgFail[scheme=="ColorAnimalPair"]))
+
+
+hist(Logins.Total[scheme=="ColorAnimalPair"], ylim=c(0,8),xlim=c(0,8), main="Histogram of ColorAnimalPair Total Logins", xlab = "Total logins")
+
+hist(Logins.success[scheme=="ColorAnimalPair"], ylim=c(0,6), xlim=c(0,5), main="Histogram of Succesful ColorAnimalPair Logins", xlab = "Succesful logins")
+
+hist(Logins.Failure[scheme=="ColorAnimalPair"], ylim=c(0,6), xlim=c(0,6), main="Histogram of Failed ColorAnimalPair Logins", xlab = "Failed logins")
+
+hist(Logins.avgFail[scheme=="ColorAnimalPair"], ylim=c(0,5), xlim=c(0,60000), main="Histogram of time for Failed ColorAnimalPair Logins", xlab = "time of Failed logins (ms)")
+
+hist(Logins.avgSuccess[scheme=="ColorAnimalPair"], ylim=c(0,6), xlim=c(0,80000), main="Histogram of time for Successful ColorAnimalPair Logins", xlab = "time of Successful logins (ms)")
+
+boxplot(Logins.avgFail[scheme=="ColorAnimalPair"], ylim= c(0,50000),main ="BoxPlot of time for ColorAnimalPair Failed Logins", ylab = "time of Failed logins (ms)")
+
+boxplot(Logins.avgSuccess[scheme=="ColorAnimalPair"],ylim=c(0,70000),main ="BoxPlot of ColorAnimalPair time for Successful Logins", ylab = "time of Successful logins (ms)")
+
+
+
