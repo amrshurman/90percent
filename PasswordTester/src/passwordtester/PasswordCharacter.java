@@ -6,7 +6,7 @@
 package passwordtester;
 
 /**
- *
+ * A data structure to hold a character pair in the password
  * @author Jacob
  */
 public class PasswordCharacter {
@@ -45,19 +45,40 @@ public class PasswordCharacter {
     private String color = null;
     private String animal = null;
     
-    
+    /**
+     * Creates a new character pair
+     * @param color The color for this pair
+     * @param animal The animal for this pair
+     */
     public PasswordCharacter(String color, String animal){
         this.color = color;
         this.animal = animal;
     }
     
+    /**
+     * Gets the color for this pair
+     * @return The color for this pair
+     */
     public String getColor() { return color; }
+    /**
+     * Gets the animal for this pair
+     * @return The animal for this pair
+     */
     public String getAnimal() { return animal; }
     
+    /**
+     * Checks if this character pair is equal to another
+     * @param other The other character pair to check if it is the same
+     * @return True is this pair is the same as the other pair
+     */
     public boolean equals(PasswordCharacter other){
         return color.equals(other.color) && animal.equals(other.animal);
     }
     
+    /**
+     * Creates a random character pair
+     * @return A randomly generated character pair
+     */
     public static PasswordCharacter createRandomCharacter(){
         return new PasswordCharacter(COLORS[(int)(Math.random() * COLORS.length)], ANIMALS[(int)(Math.random() * ANIMALS.length)]);
     }

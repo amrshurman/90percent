@@ -8,7 +8,7 @@ package comp3008csvreader;
 import java.util.Date;
 
 /**
- *
+ * A data structure to store and sort data from a log file record
  * @author Jacob
  */
 public class Record {
