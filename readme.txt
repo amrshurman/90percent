@@ -13,4 +13,6 @@ EvaluationStats:
 Is the system written in R to create statistics and graphs from the compiled log data
 Looks for the compiled log data in the ../data/loginData.csv file relative to the project directory
 
+Executables: You can view our scheme in this folder
+
 The data folder is where all compiled log data and processed log data is stored

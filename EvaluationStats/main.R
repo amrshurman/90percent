@@ -128,7 +128,7 @@ print(sd(Logins.Total[scheme=="ColorAnimalPair"]))
 print("sd for Successful login")
 print(sd(Logins.success[scheme=="ColorAnimalPair"]))
 print("sd for Failed login")
-print(sd(Logins.Failure[scheme=="testpasstiles"]))
+print(sd(Logins.Failure[scheme=="ColorAnimalPair"]))
 
 print("Mean for successful login time")
 print(mean(Logins.avgSuccess[scheme=="ColorAnimalPair"]))
@@ -152,7 +152,7 @@ hist(Logins.success[scheme=="ColorAnimalPair"], ylim=c(0,6), xlim=c(0,5), main="
 
 hist(Logins.Failure[scheme=="ColorAnimalPair"], ylim=c(0,6), xlim=c(0,6), main="Histogram of Failed ColorAnimalPair Logins", xlab = "Failed logins")
 
-hist(Logins.avgFail[scheme=="ColorAnimalPair"], ylim=c(0,5), xlim=c(0,60000), main="Histogram of time for Failed ColorAnimalPair Logins", xlab = "time of Failed logins (ms)")
+hist(Logins.avgFail[scheme=="ColorAnimalPair"], ylim=c(0,4), xlim=c(0,60000), main="Histogram of time for Failed ColorAnimalPair Logins", xlab = "time of Failed logins (ms)")
 
 hist(Logins.avgSuccess[scheme=="ColorAnimalPair"], ylim=c(0,6), xlim=c(0,80000), main="Histogram of time for Successful ColorAnimalPair Logins", xlab = "time of Successful logins (ms)")
 
